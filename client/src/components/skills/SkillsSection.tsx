@@ -3,6 +3,7 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import SectionHeading from '../ui/section-heading';
 import SkillBar from '../ui/skill-bar';
+import SkillIcon from '../ui/skill-icon';
 import { frontendSkills, backendSkills, otherSkills } from '@/data';
 
 export default function SkillsSection() {
@@ -47,6 +48,7 @@ export default function SkillsSection() {
                   percentage={skill.percentage}
                   color="primary"
                   animate={animateSkills}
+                  icon={skill.icon}
                 />
               ))}
             </div>
@@ -66,6 +68,7 @@ export default function SkillsSection() {
                   percentage={skill.percentage}
                   color="secondary"
                   animate={animateSkills}
+                  icon={skill.icon}
                 />
               ))}
             </div>
@@ -83,14 +86,15 @@ export default function SkillsSection() {
           <div className="flex flex-wrap justify-center gap-4">
             {otherSkills.map((skill, index) => (
               <motion.div
-                key={skill}
-                className="bg-slate-800/50 px-6 py-3 rounded-full"
+                key={skill.name}
+                className="bg-slate-800/50 px-6 py-3 rounded-full flex items-center gap-2"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.3, delay: index * 0.1 }}
               >
-                <span>{skill}</span>
+                {skill.icon && <SkillIcon icon={skill.icon} size={18} />}
+                <span>{skill.name}</span>
               </motion.div>
             ))}
           </div>

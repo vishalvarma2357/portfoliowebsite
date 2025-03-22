@@ -20,15 +20,20 @@ export const backendSkills: Skill[] = [
   { name: 'GraphQL', percentage: 75, icon: 'graphql' },
 ];
 
-export const otherSkills: string[] = [
-  'Git & GitHub',
-  'Docker',
-  'AWS',
-  'Jest',
-  'Webpack',
-  'Agile/Scrum',
-  'TypeScript',
-  'CI/CD',
+interface OtherSkill {
+  name: string;
+  icon?: string;
+}
+
+export const otherSkills: OtherSkill[] = [
+  { name: 'Git & GitHub', icon: 'git' },
+  { name: 'Docker', icon: 'docker' },
+  { name: 'AWS', icon: 'aws' },
+  { name: 'Jest', icon: 'default' },
+  { name: 'Webpack', icon: 'default' },
+  { name: 'Agile/Scrum', icon: 'default' },
+  { name: 'TypeScript', icon: 'typescript' },
+  { name: 'CI/CD', icon: 'default' },
 ];
 
 export interface Project {
