@@ -10,9 +10,10 @@ import {
   SiGraphql,
   SiTypescript,
   SiGit,
-  SiDocker
+  SiDocker,
+  SiAmazon
 } from 'react-icons/si';
-import { FaServer, FaCode, FaAws } from 'react-icons/fa';
+import { FaServer, FaCode } from 'react-icons/fa';
 
 interface SkillIconProps {
   icon: string;
@@ -35,7 +36,7 @@ export default function SkillIcon({ icon, size = 24, className = '' }: SkillIcon
     typescript: <SiTypescript size={size} className={`text-blue-600 ${className}`} />,
     git: <SiGit size={size} className={`text-orange-600 ${className}`} />,
     docker: <SiDocker size={size} className={`text-blue-500 ${className}`} />,
-    aws: <FaAws size={size} className={`text-yellow-500 ${className}`} />,
+    aws: <SiAmazon size={size} className={`text-yellow-500 ${className}`} />,
     default: <FaCode size={size} className={`text-gray-400 ${className}`} />
   };
 
