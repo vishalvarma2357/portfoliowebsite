@@ -1,22 +1,23 @@
 export interface Skill {
   name: string;
   percentage: number;
+  icon?: string;
 }
 
 export const frontendSkills: Skill[] = [
-  { name: 'React.js', percentage: 95 },
-  { name: 'JavaScript (ES6+)', percentage: 90 },
-  { name: 'HTML5 & CSS3', percentage: 95 },
-  { name: 'Redux', percentage: 85 },
-  { name: 'Responsive Design', percentage: 90 },
+  { name: 'React.js', percentage: 95, icon: 'react' },
+  { name: 'JavaScript (ES6+)', percentage: 90, icon: 'javascript' },
+  { name: 'HTML5 & CSS3', percentage: 95, icon: 'html5' },
+  { name: 'Redux', percentage: 85, icon: 'redux' },
+  { name: 'Responsive Design', percentage: 90, icon: 'css3' },
 ];
 
 export const backendSkills: Skill[] = [
-  { name: 'Node.js', percentage: 90 },
-  { name: 'Express.js', percentage: 85 },
-  { name: 'MongoDB', percentage: 80 },
-  { name: 'RESTful APIs', percentage: 90 },
-  { name: 'GraphQL', percentage: 75 },
+  { name: 'Node.js', percentage: 90, icon: 'node' },
+  { name: 'Express.js', percentage: 85, icon: 'express' },
+  { name: 'MongoDB', percentage: 80, icon: 'mongodb' },
+  { name: 'RESTful APIs', percentage: 90, icon: 'api' },
+  { name: 'GraphQL', percentage: 75, icon: 'graphql' },
 ];
 
 export const otherSkills: string[] = [

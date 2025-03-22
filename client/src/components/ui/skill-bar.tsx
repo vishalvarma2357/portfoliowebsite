@@ -1,14 +1,16 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import SkillIcon from './skill-icon';
 
 interface SkillBarProps {
   name: string;
   percentage: number;
   color: 'primary' | 'secondary';
   animate: boolean;
+  icon?: string;
 }
 
-export default function SkillBar({ name, percentage, color, animate }: SkillBarProps) {
+export default function SkillBar({ name, percentage, color, animate, icon }: SkillBarProps) {
   const [width, setWidth] = useState(0);
   
   useEffect(() => {
@@ -23,8 +25,11 @@ export default function SkillBar({ name, percentage, color, animate }: SkillBarP
   
   return (
     <div className="skill-item">
-      <div className="flex justify-between mb-2">
-        <span className="font-medium">{name}</span>
+      <div className="flex justify-between mb-2 items-center">
+        <div className="flex items-center gap-3">
+          {icon && <SkillIcon icon={icon} size={24} />}
+          <span className="font-medium">{name}</span>
+        </div>
         <span>{percentage}%</span>
       </div>
       <div className="h-2 w-full bg-slate-800 rounded-full overflow-hidden">
