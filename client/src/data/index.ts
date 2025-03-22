@@ -117,3 +117,158 @@ export const experiences: Experience[] = [
     ],
   },
 ];
+
+// Achievement types for gamification
+export type AchievementCategory = 'technical' | 'professional' | 'certification' | 'education' | 'award';
+export type AchievementRarity = 'common' | 'uncommon' | 'rare' | 'epic' | 'legendary';
+
+export interface Achievement {
+  id: number;
+  title: string;
+  description: string;
+  icon: string; // Icon name from lucide-react
+  dateAchieved: string;
+  category: AchievementCategory;
+  rarity: AchievementRarity;
+  points: number; // For gamification points
+  unlocked: boolean; // If achievement is public/unlocked
+  requiredMessage?: string; // Message to show if achievement is locked
+  levelProgress?: number; // Optional progress percentage for multi-level achievements
+}
+
+export const achievements: Achievement[] = [
+  {
+    id: 1,
+    title: 'React Master',
+    description: 'Completed 10+ complex React projects with advanced state management',
+    icon: 'Code',
+    dateAchieved: '2022-04-15',
+    category: 'technical',
+    rarity: 'rare',
+    points: 150,
+    unlocked: true,
+  },
+  {
+    id: 2,
+    title: 'API Architect',
+    description: 'Designed and implemented scalable RESTful and GraphQL APIs',
+    icon: 'Network',
+    dateAchieved: '2021-09-22',
+    category: 'technical',
+    rarity: 'uncommon',
+    points: 100,
+    unlocked: true,
+  },
+  {
+    id: 3,
+    title: 'Performance Guru',
+    description: 'Optimized application performance by 70% through advanced techniques',
+    icon: 'Zap',
+    dateAchieved: '2023-02-10',
+    category: 'technical',
+    rarity: 'epic',
+    points: 200,
+    unlocked: true,
+  },
+  {
+    id: 4,
+    title: 'Open Source Contributor',
+    description: 'Made significant contributions to open source projects',
+    icon: 'Github',
+    dateAchieved: '2020-11-05',
+    category: 'professional',
+    rarity: 'rare',
+    points: 150,
+    unlocked: true,
+  },
+  {
+    id: 5,
+    title: 'AWS Certified Developer',
+    description: 'Earned AWS Certified Developer Associate certification',
+    icon: 'Cloud',
+    dateAchieved: '2022-06-30',
+    category: 'certification',
+    rarity: 'uncommon',
+    points: 100,
+    unlocked: true,
+  },
+  {
+    id: 6,
+    title: 'Full Stack Virtuoso',
+    description: 'Mastered both frontend and backend technologies',
+    icon: 'Layers',
+    dateAchieved: '2023-01-15',
+    category: 'technical',
+    rarity: 'epic',
+    points: 200,
+    unlocked: true,
+    levelProgress: 85, // 85% progress to next level
+  },
+  {
+    id: 7,
+    title: 'Accessibility Champion',
+    description: 'Created fully accessible applications following WCAG guidelines',
+    icon: 'Accessibility',
+    dateAchieved: '2022-05-12',
+    category: 'professional',
+    rarity: 'rare',
+    points: 150,
+    unlocked: true,
+  },
+  {
+    id: 8,
+    title: 'Database Maestro',
+    description: 'Expertly designed and optimized database schemas and queries',
+    icon: 'Database',
+    dateAchieved: '2021-12-07',
+    category: 'technical',
+    rarity: 'uncommon',
+    points: 100,
+    unlocked: true,
+  },
+  {
+    id: 9,
+    title: 'Conference Speaker',
+    description: 'Presented at tech conferences sharing knowledge with the community',
+    icon: 'Mic',
+    dateAchieved: '2023-03-20',
+    category: 'professional',
+    rarity: 'epic',
+    points: 200,
+    unlocked: true,
+  },
+  {
+    id: 10,
+    title: 'Master Mentor',
+    description: 'Mentored 20+ junior developers helping them advance their careers',
+    icon: 'GraduationCap',
+    dateAchieved: '2022-10-01',
+    category: 'professional',
+    rarity: 'legendary',
+    points: 300,
+    unlocked: true,
+  },
+  {
+    id: 11,
+    title: 'Million-User App',
+    description: 'Developed an application that achieved over one million users',
+    icon: 'Users',
+    dateAchieved: '2023-07-11',
+    category: 'professional',
+    rarity: 'legendary',
+    points: 300,
+    unlocked: false,
+    requiredMessage: 'This achievement is yet to be unlocked',
+  },
+  {
+    id: 12,
+    title: 'DevOps Pioneer',
+    description: 'Established CI/CD pipelines and automated deployment workflows',
+    icon: 'GitMerge',
+    dateAchieved: '2021-08-15',
+    category: 'technical',
+    rarity: 'rare',
+    points: 150,
+    unlocked: true,
+  },
+];
