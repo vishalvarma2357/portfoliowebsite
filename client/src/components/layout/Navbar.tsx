@@ -3,6 +3,7 @@ import { Link, useLocation } from 'wouter';
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { ThemeToggle } from '@/components/ui/theme-toggle';
 
 interface NavLink {
   id: string;
@@ -54,20 +55,23 @@ export default function Navbar({ activeSection }: { activeSection: string }) {
           </a>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
-            {navLinks.map((link) => (
-              <button
-                key={link.id}
-                onClick={() => scrollToSection(link.id)}
-                className={`py-2 transition-colors ${
-                  activeSection === link.id 
-                    ? 'text-primary border-b-2 border-primary' 
-                    : 'text-gray-500 hover:text-primary'
-                }`}
-              >
-                {link.label}
-              </button>
-            ))}
+          <div className="hidden md:flex items-center">
+            <div className="flex space-x-8 mr-4">
+              {navLinks.map((link) => (
+                <button
+                  key={link.id}
+                  onClick={() => scrollToSection(link.id)}
+                  className={`py-2 transition-colors ${
+                    activeSection === link.id 
+                      ? 'text-primary border-b-2 border-primary' 
+                      : 'text-gray-500 hover:text-primary'
+                  }`}
+                >
+                  {link.label}
+                </button>
+              ))}
+            </div>
+            <ThemeToggle />
           </div>
           
           {/* Mobile Menu Button */}
@@ -106,6 +110,10 @@ export default function Navbar({ activeSection }: { activeSection: string }) {
                   {link.label}
                 </button>
               ))}
+              <div className="flex items-center pt-2">
+                <span className="text-gray-500 mr-2">Theme:</span>
+                <ThemeToggle />
+              </div>
             </div>
           </motion.div>
         )}
