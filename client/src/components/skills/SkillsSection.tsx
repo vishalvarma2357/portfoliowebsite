@@ -29,9 +29,9 @@ export default function SkillsSection() {
   };
 
   return (
-    <section id="skills" className="py-20 bg-slate-900 text-white">
+    <section id="skills" className="py-20 bg-white text-black">
       <div className="container mx-auto px-6">
-        <SectionHeading subtitle="My Skills" title="Technical Expertise" light />
+        <SectionHeading subtitle="My Skills" title="Technical Expertise" />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16" ref={ref}>
           <motion.div
@@ -87,7 +87,7 @@ export default function SkillsSection() {
             {otherSkills.map((skill, index) => (
               <motion.div
                 key={skill.name}
-                className="bg-slate-800/50 px-6 py-3 rounded-full flex items-center gap-2"
+                className="bg-gray-200 px-6 py-3 rounded-full flex items-center gap-2"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

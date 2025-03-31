@@ -8,6 +8,7 @@ export default function ContactSection() {
   return (
     <section id="contact" className="py-20 bg-gray-50">
       <div className="container mx-auto px-6">
+
         <SectionHeading subtitle="Get In Touch" title="Contact Me" />
 
         <div className="flex flex-col lg:flex-row gap-12 max-w-6xl mx-auto">
@@ -32,7 +33,7 @@ export default function ContactSection() {
                   <div>
                     <h4 className="font-semibold mb-1">Email</h4>
                     <a href="mailto:alex@example.com" className="text-gray-500 hover:text-primary transition-colors">
-                      alex@example.com
+                      vishalvarma9762@gmail.com
                     </a>
                   </div>
                 </div>
@@ -44,7 +45,7 @@ export default function ContactSection() {
                   <div>
                     <h4 className="font-semibold mb-1">Phone</h4>
                     <a href="tel:+11234567890" className="text-gray-500 hover:text-primary transition-colors">
-                      +1 (123) 456-7890
+                      +91 8149194260
                     </a>
                   </div>
                 </div>
@@ -55,7 +56,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1">Location</h4>
-                    <p className="text-gray-500">San Francisco, CA</p>
+                    <p className="text-gray-500">Mumbai, Maharashtra</p>
                   </div>
                 </div>
               </div>
@@ -64,7 +65,7 @@ export default function ContactSection() {
                 <h4 className="font-semibold mb-4">Connect on Social Media</h4>
                 <div className="flex gap-4">
                   <a 
-                    href="https://github.com" 
+                    href="https://github.com/vishalvarma2357" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="bg-slate-900 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
@@ -73,7 +74,7 @@ export default function ContactSection() {
                     <FaGithub />
                   </a>
                   <a 
-                    href="https://linkedin.com" 
+                    href="https://www.linkedin.com/in/vishal-varma-497bb1285/" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="bg-slate-900 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
@@ -81,7 +82,7 @@ export default function ContactSection() {
                   >
                     <FaLinkedinIn />
                   </a>
-                  <a 
+                  {/* <a 
                     href="https://twitter.com" 
                     target="_blank" 
                     rel="noopener noreferrer"
@@ -89,7 +90,7 @@ export default function ContactSection() {
                     aria-label="Twitter"
                   >
                     <FaTwitter />
-                  </a>
+                  </a> */}
                   <a 
                     href="https://instagram.com" 
                     target="_blank" 

@@ -14,7 +14,7 @@ export default function Home() {
 
   // Set document title
   useEffect(() => {
-    document.title = 'Alex Johnson | MERN Stack Developer';
+    document.title = 'Vishal Varma | MERN Stack Developer';
   }, []);
 
   return (

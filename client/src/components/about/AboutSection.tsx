@@ -4,10 +4,10 @@ import { Button } from '@/components/ui/button';
 import SectionHeading from '../ui/section-heading';
 
 export default function AboutSection() {
-  return (
-    <section id="about" className="py-20 bg-white">
+  return (<section id="about" className="pt-8 py-20 bg-gray-50 -mt-10"> {/* Reduced top padding */}
+
       <div className="container mx-auto px-6">
-        <SectionHeading subtitle="About Me" title="My Background Story" />
+        <SectionHeading subtitle="" title="About Me" />
 
         <div className="flex flex-col lg:flex-row gap-12 items-center">
           <motion.div 
@@ -36,50 +36,35 @@ export default function AboutSection() {
             <h3 className="text-2xl font-bold mb-6">MERN Stack Developer with a passion for building exceptional web applications</h3>
             
             <p className="text-gray-500 mb-4">
-              With over 5 years of experience in web development, I specialize in creating responsive and 
-              dynamic applications using the MERN stack. My journey in programming began during my Computer 
-              Science studies at MIT, where I developed a strong foundation in algorithms and data structures.
+            Hi, I'm Vishal Varma, a passionate MERN Stack Developer  with hands-on experience in building dynamic web applications. 
+            With expertise in MongoDB, Express.js, React, and Node.js, I craft seamless full-stack solutions that prioritize performance, maintainability, and user experience.
+
             </p>
             
             <p className="text-gray-500 mb-6">
-              I've worked with startups and established companies, helping them build scalable web solutions 
-              that solve real business problems. My approach combines technical expertise with a keen eye for 
-              user experience, ensuring that the applications I build are not only functional but also intuitive 
-              and enjoyable to use.
+            My approach to development follows clean code principles and a problem-solving mindset, ensuring efficient and scalable solutions.
+            Beyond coding, I continuously explore new technologies, participate in coding challenges, and contribute to open-source projects to stay updated with the latest industry trends.
+            </p>
+            <p className="text-gray-500 mb-6">
+            When I'm not coding, I enjoy exploring new technologies, working on personal projects, and enhancing my skills through certifications.
+             I'm always open to collaborations, so feel free to reach out and contact!
             </p>
             
+
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div>
                 <h4 className="font-bold mb-3">Education</h4>
                 <ul className="space-y-2 text-gray-500">
+                 
                   <li className="flex items-start gap-2">
                     <FaGraduationCap className="mt-1 text-primary" />
-                    <span>MSc in Computer Science, MIT</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <FaGraduationCap className="mt-1 text-primary" />
-                    <span>BSc in Software Engineering, Stanford</span>
+                    <span>BE in Computer Engineering, University of Mumbai</span>
                   </li>
                 </ul>
               </div>
               
-              <div>
-                <h4 className="font-bold mb-3">Interests</h4>
-                <ul className="space-y-2 text-gray-500">
-                  <li className="flex items-start gap-2">
-                    <FaBook className="mt-1 text-primary" />
-                    <span>Open Source Contributing</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <FaMountain className="mt-1 text-primary" />
-                    <span>Hiking & Photography</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <FaChess className="mt-1 text-primary" />
-                    <span>Chess & Strategy Games</span>
-                  </li>
-                </ul>
-              </div>
+            
             </div>
             
             <Button 

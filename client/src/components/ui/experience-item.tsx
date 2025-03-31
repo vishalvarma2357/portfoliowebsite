@@ -5,7 +5,6 @@ interface ExperienceItemProps {
   company: string;
   period: string;
   description: string;
-  achievements: string[];
 }
 
 export default function ExperienceItem({
@@ -13,7 +12,6 @@ export default function ExperienceItem({
   company,
   period,
   description,
-  achievements,
 }: ExperienceItemProps) {
   return (
     <div className="flex flex-col md:flex-row items-start">
@@ -34,14 +32,6 @@ export default function ExperienceItem({
           <h3 className="text-xl font-bold">{position}</h3>
           <p className="text-primary font-semibold mb-3">{company}</p>
           <p className="text-gray-500 mb-4">{description}</p>
-          <ul className="space-y-2 text-gray-500">
-            {achievements.map((achievement, index) => (
-              <li key={index} className="flex items-start gap-2">
-                <FaCheckCircle className="text-primary mt-1" />
-                <span>{achievement}</span>
-              </li>
-            ))}
-          </ul>
         </div>
       </div>
     </div>

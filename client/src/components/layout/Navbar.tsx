@@ -50,7 +50,7 @@ export default function Navbar({ activeSection }: { activeSection: string }) {
         <div className="flex justify-between items-center">
           <a href="#home" className="text-2xl font-bold text-primary flex items-center gap-2">
             <span className="code text-pink-500">&lt;</span>
-            <span>Alex Johnson</span>
+            <span>Vishal Varma</span>
             <span className="code text-pink-500">/&gt;</span>
           </a>
           

@@ -27,7 +27,7 @@ export default function ExperienceSection() {
                 company={experience.company}
                 period={experience.period}
                 description={experience.description}
-                achievements={experience.achievements}
+                // achievements={experience.achievements}
               />
             </motion.div>
           ))}
